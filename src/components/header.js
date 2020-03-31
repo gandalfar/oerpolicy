@@ -1,32 +1,31 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import IconGlobe from "../svgs/icon-globe.svg";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header className="bg-primary-500">
     <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+      className="container mx-auto px-4 py-4 sm:px-6 lg:px-8 text-white"
+
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+      <div className="flex justify-between">
+        <h1 className="flex hover:underline">
+          <Link
+            to="/"
+          >
+            {siteTitle}
+          </Link>
+        </h1>
+
+        <span
+          className="flex"
         >
-          {siteTitle}
-        </Link>
-      </h1>
+        <a className="hover:underline" href="https://oerworldmap.org/">
+          <IconGlobe className="inline-block h-3 -mt-1 pr-1" />OER World Map
+        </a>
+      </span>
+      </div>
     </div>
   </header>
 )
