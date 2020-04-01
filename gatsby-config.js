@@ -31,22 +31,20 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /svgs/
-        }
-      }
+          include: /svgs/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [
-          require("tailwindcss")('./tailwind.config.js'),
-        ],
+        postCssPlugins: [require("tailwindcss")("./tailwind.config.js")],
       },
     },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
-        printRejected: true, // Print removed selectors and processed file names
+        printRejected: false, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         // tailwind: true, // Enable tailwindcss support
         whitelistPatterns: [/[\w-/.:]+(?<!:)/g],

@@ -35,7 +35,7 @@ const ImageIndexCongress = ({ className }) => {
   )
 }
 
-Image.propTypes = {
+ImageIndexCongress.propTypes = {
   className: PropTypes.string,
 }
 
