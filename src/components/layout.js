@@ -39,8 +39,8 @@ const Layout = ({ children, showHero }) => {
               href="https://creativecommons.org/licenses/by/4.0/"
               className="pr-5"
             >
-              <IconCc class="inline-block h-5 -mt-1 pr-1" />{" "}
-              <IconCcBy class="inline-block h-5 -mt-1 pr-1" />
+              <IconCc className="inline-block h-5 -mt-1 pr-1" />{" "}
+              <IconCcBy className="inline-block h-5 -mt-1 pr-1" />
             </a>
             <a
               className="pr-5 hover:underline"
