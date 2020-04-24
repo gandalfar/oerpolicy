@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,6 +12,7 @@ import ImageIndexPolicyDeclaration from "../components/ImageIndexPolicyDeclarati
 
 import IconFilePlus from "../svgs/icon-file-plus.svg"
 import IconFileSearch from "../svgs/icon-file-search.svg"
+import ImageTools from "../components/ImageTools"
 
 const IndexPage = ({ location }) => (
   <Layout showHero="true">
@@ -187,14 +188,7 @@ const IndexPage = ({ location }) => (
                     policies.
                   </p>
                   <div className="rounded-md shadow inline-block mt-6">
-                    <a
-                      href="#overview"
-                      className="inline-block justify-center px-4 py-1
-                                 border border-transparent text-base leading-6
-                                 font-medium rounded-md text-white bg-primary-500
-                                 hover:bg-secondary focus:outline-none focus:shadow-outline-indigo transition
-                                 duration-150 ease-in-out md:py-2 md:px-5"
-                    >
+                    <a href="#overview" className="button primary">
                       Add a Policy
                     </a>
                   </div>
@@ -208,6 +202,31 @@ const IndexPage = ({ location }) => (
         <ImagePolicyForum className="rounded" />
       </div>
     </div>
+
+    <ContentFeature
+      header={{
+        title: "Resources",
+        description: "Are you working on a guideline, policy or strategy?",
+      }}
+    >
+      <TwoColumns>
+        <TextColumn className="text-lg">
+          <p className="mt-2 leading-6">
+            We have a set of resources to support the development of OE policies
+            at an institutional or governmental level.
+          </p>
+          <p class="mt-10">
+            <Link to="/resources" className="button primary">
+              Explore Resources
+            </Link>
+          </p>
+        </TextColumn>
+        <div className="mt-10 -mx-4 relative lg:mt-0 col-span-2 lg:col-span-1">
+          <ImageTools className="rounded" />
+        </div>
+      </TwoColumns>
+    </ContentFeature>
+
     <SEO title="Home" />
   </Layout>
 )
