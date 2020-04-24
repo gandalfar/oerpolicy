@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -13,9 +13,42 @@ import ImageIndexPolicyDeclaration from "../components/ImageIndexPolicyDeclarati
 import IconFilePlus from "../svgs/icon-file-plus.svg"
 import IconFileSearch from "../svgs/icon-file-search.svg"
 import ImageTools from "../components/ImageTools"
+import Hero from "../components/hero"
 
 const IndexPage = ({ location }) => (
-  <Layout showHero="true">
+  <Layout
+    heroComponent={
+      <Hero
+        title={
+          <Fragment>
+            Approachable collection of
+            <br />
+            <span className="text-primary-100"> Open Education Policies</span>
+          </Fragment>
+        }
+        description="The Open Education Policy Registry collects, classifies and visualizes policy documents from all educational sectors and on all levels of governance."
+      >
+        <div className="rounded-md shadow">
+          <a
+            href="#overview"
+            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-500 hover:bg-secondary focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+          >
+            Policy Overview
+          </a>
+        </div>
+        <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+          <a
+            href="https://oerworldmap.org/resource/?filter.about.%40type=%22Policy%22"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-primary-500 bg-white hover:text-white hover:bg-primary-500 focus:outline-none focus:shadow-outline-primary transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+          >
+            Find a Policy
+          </a>
+        </div>
+      </Hero>
+    }
+  >
     <ContentFeature
       header={{
         title: "Enabling Open Education policy making",
@@ -128,10 +161,9 @@ const IndexPage = ({ location }) => (
         description:
           "Contribute to the collection of Open Education Policies and level up ",
       }}
-    ></ContentFeature>
-    <div className="relative grid grid-cols-1 lg:grid-cols-2 lg:gap-8 lg:items-center mb-20">
-      <div className="relative col-span-2 lg:col-span-1">
-        <div className="max-w-lg text-xl">
+    >
+      <TwoColumns>
+        <TextColumn>
           <ul className="">
             <li>
               <div className="flex">
@@ -196,12 +228,12 @@ const IndexPage = ({ location }) => (
               </div>
             </li>
           </ul>
+        </TextColumn>
+        <div className="mt-10 -mx-4 pl-4 relative lg:mt-0 col-span-2 lg:col-span-1">
+          <ImagePolicyForum className="rounded" />
         </div>
-      </div>
-      <div className="mt-10 -mx-4 relative lg:mt-0 col-span-2 lg:col-span-1">
-        <ImagePolicyForum className="rounded" />
-      </div>
-    </div>
+      </TwoColumns>
+    </ContentFeature>
 
     <ContentFeature
       header={{
@@ -210,8 +242,8 @@ const IndexPage = ({ location }) => (
       }}
     >
       <TwoColumns>
-        <TextColumn className="text-lg">
-          <p className="mt-2 leading-6">
+        <TextColumn className="text-lg leading-8">
+          <p>
             We have a set of resources to support the development of OE policies
             at an institutional or governmental level.
           </p>

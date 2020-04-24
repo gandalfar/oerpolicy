@@ -1,13 +1,22 @@
-import React from "react"
+import React, { Fragment } from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeroSmall from "../components/hero-small"
 
 const NotFoundPage = () => (
-  <Layout>
+  <Layout
+    heroComponent={
+      <HeroSmall
+        title={
+          <Fragment>
+            <span className="text-primary-100">404: Not Found</span>
+          </Fragment>
+        }
+      ></HeroSmall>
+    }
+  >
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
   </Layout>
 )
 

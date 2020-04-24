@@ -10,13 +10,12 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Hero from "./hero"
 
 import IconCcBy from "../svgs/icon-cc-by.svg"
 import IconCc from "../svgs/icon-cc.svg"
 import IconGlobe from "../svgs/icon-globe.svg"
 
-const Layout = ({ children, showHero }) => {
+const Layout = ({ children, heroComponent }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,7 +29,7 @@ const Layout = ({ children, showHero }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      {showHero && <Hero />}
+      {heroComponent}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div>
           <main>{children}</main>
@@ -62,11 +61,11 @@ const Layout = ({ children, showHero }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  showHero: PropTypes.bool,
+  heroComponent: PropTypes.element,
 }
 
 Header.defaultProps = {
-  showHero: false,
+  heroComponent: null,
 }
 
 export default Layout
