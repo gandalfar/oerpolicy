@@ -31,6 +31,7 @@ const ImageIndexCongress = ({ className }) => {
     <Img
       className={className}
       fluid={data.placeholderImage.childImageSharp.fluid}
+      alt="Group photo of Ljubljana OER Congress delegates"
     />
   )
 }

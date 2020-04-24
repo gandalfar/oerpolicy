@@ -1,12 +1,14 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import ContentFeature from "../components/content-feature"
+import TwoColumns from "../components/two-columns"
+import TextColumn from "../components/text-column"
 import ImageIndexCongress from "../components/ImageIndexCongress"
 import ImagePolicyForum from "../components/ImagePolicyForum"
+import ImageIndexPolicyDeclaration from "../components/ImageIndexPolicyDeclaration"
 
 import IconFilePlus from "../svgs/icon-file-plus.svg"
 import IconFileSearch from "../svgs/icon-file-search.svg"
@@ -15,23 +17,85 @@ const IndexPage = ({ location }) => (
   <Layout showHero="true">
     <ContentFeature
       header={{
-        title: "Vision",
-        description:
-          "The Open Education Policy Registry collects, classifies and visualizes policy documents from all educational sectors and on all levels of governance. ",
+        title: "Enabling Open Education policy making",
       }}
     >
-      <div className="relative mt-12 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 lg:items-center">
-        <div className="relative">
-          <div className="max-w-lg text-xl">
-            It aims to support policy makers, advocates and researchers in
-            gaining a deeper understanding of various Open Education policies.
-            By providing good practices the OE Policy Registry seeks to inspire
-            policy-making in favour of Open Education for everyone.
+      <TwoColumns>
+        <TextColumn>
+          <div className="max-w-lg text-xl mb-4">
+            The Open Education Policy Hub aims to support the wider Open
+            Education community in developing policies, helping them to locate
+            and learn from existing initiatives and from the people and
+            organisations which have developed and promoted them.
           </div>
-        </div>
+          <div className="max-w-lg text-xl mb-4">
+            The heart of the hub is the Open Education Policy Registry, a
+            dynamic database which collects and classifies Open Education policy
+            documents from all educational sectors and all levels of governance
+            around the world.
+          </div>
+          <div className="max-w-lg text-xl">
+            We aim at supporting policy advocates, policy makers and researchers
+            in gaining a deeper understanding of Open Education policies. By
+            showcasing good practices, we seek to inspire policy-making in
+            favour of Open Education for everyone.
+          </div>
+        </TextColumn>
         <div className="mt-10 -mx-4 relative lg:mt-0">
           <ImageIndexCongress className="rounded" />
         </div>
+      </TwoColumns>
+    </ContentFeature>
+
+    <ContentFeature
+      header={{
+        title: "What are Open Education  policies?",
+      }}
+    >
+      <TwoColumns>
+        <div className="mt-10 -mx-4 relative lg:mt-0">
+          <ImageIndexPolicyDeclaration className="rounded" />
+        </div>
+        <TextColumn>
+          <p className="mb-4">
+            Open education policies (OE policies) are formal regulations
+            regarding support, funding, adoption, and use of Open Educational
+            Resources (OER) and/or Open Educational Practices (OEP). Such
+            policies are designed to support the creation, adoption, and sharing
+            of OER and the design and integration of OEP into programs of study
+            (
+            <a href="https://library.educause.edu/resources/2018/8/7-things-you-should-know-about-open-education-policies">
+              Educause
+            </a>
+            ).
+          </p>
+          <p>
+            OE Policies may enable and regulate educators’ training and
+            institutional resources and they provide a set of rational goals. OE
+            policies often entail timelines, budgets and funds as well as human
+            resources and other factors to enable Open Education.
+          </p>
+        </TextColumn>
+      </TwoColumns>
+      <div className="my-10 leading-8 text-xl bg-gray-200 rounded px-8 pt-2 pb-6 -mx-4">
+        <h3 className="text-2xl leading-8 font-bold text-grey-900 sm:text-2x sm:leading-10 py-4">
+          What is a policy?
+        </h3>
+        <p>An Open Education policy...</p>
+
+        <ul className="mt-4">
+          <li>...can be a law in your region or country</li>
+          <li>...can be a procedural instruction at your institution</li>
+          <li>...can be a funding agreement with</li>
+          <li>
+            ...can be a recommendation within the institution that you work at
+          </li>
+          <li>
+            ...can be a grant programme at regional or institutional level to
+            foster Open Education
+          </li>
+          <li>...can be just a part of broader Education policy</li>
+        </ul>
       </div>
     </ContentFeature>
 
@@ -41,22 +105,20 @@ const IndexPage = ({ location }) => (
         title: "Policy overview",
       }}
     >
-      <div className="relative mt-12 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 lg:gap-8 lg:items-center">
+      <TwoColumns>
         <div className="mt-10 -mx-4 relative lg:mt-0 text-center flex justify-center">
           <img
             src="https://oerworldmap.org/stats?field=about.additionalType.@id&filter.about.@type=%22Policy%22"
             alt="OER Policies by Category"
           />
         </div>
-        <div className="relative">
-          <div className="max-w-lg text-xl">
-            Become a policy expert! Find out how deep and wide Open Education
-            policies can reach. Browse through different dimensions of Open
-            Education policy-making and get a feel for what you want to address
-            in your own policy.
-          </div>
-        </div>
-      </div>
+        <TextColumn>
+          Become a policy expert! Find out how deep and wide Open Education
+          policies can reach. Browse through different dimensions of Open
+          Education policy-making and get a feel for what you want to address in
+          your own policy.
+        </TextColumn>
+      </TwoColumns>
     </ContentFeature>
 
     <ContentFeature

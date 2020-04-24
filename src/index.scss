@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 /* Custom Inter Font */
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 body {
   //@apply bg-gray-100;
+}
+
+.image__attribution {
+  @apply text-xs text-gray-700 italic;
 }
