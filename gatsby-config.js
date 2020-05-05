@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `OE Policy Registry`,
-    description: `Open Education Policy Registry`,
+    title: `OE Policy Hub`,
+    description: `The Open Education Policy Hub`,
     author: `@hbz`,
   },
   plugins: [
@@ -61,6 +61,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-force-trailing-slashes`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

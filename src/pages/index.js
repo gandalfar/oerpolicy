@@ -37,14 +37,12 @@ const IndexPage = ({ location }) => (
           </a>
         </div>
         <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-          <a
-            href="https://oerworldmap.org/resource/?filter.about.%40type=%22Policy%22"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/explore"
             className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-primary-500 bg-white hover:text-white hover:bg-primary-500 focus:outline-none focus:shadow-outline-primary transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
           >
-            Find a Policy
-          </a>
+            Explore OE Policies
+          </Link>
         </div>
       </Hero>
     }

@@ -5,28 +5,33 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@tailwindcss/ui": "^0.1.3",
+    "@tailwindcss/ui": "^0.3.0",
     "gatsby": "^2.19.45",
     "gatsby-image": "^2.2.44",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-offline": "^3.0.41",
     "gatsby-plugin-purgecss": "^5.0.0",
-    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-react-helmet": "^3.3.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.4.13",
     "gatsby-source-filesystem": "^2.1.56",
     "gatsby-transformer-sharp": "^2.3.19",
+    "isomorphic-unfetch": "^3.0.0",
     "node-sass": "^4.13.1",
+    "plotly.js": "^1.54.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
+    "react-helmet": "^6.0.0",
+    "react-plotly.js": "^2.4.0",
     "reakit": "^1.0.0-rc.1",
+    "swr": "^0.2.0",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
+    "prettier": "^2.0.5"
   },
   "keywords": [
     "gatsby"

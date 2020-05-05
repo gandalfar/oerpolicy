@@ -36,9 +36,9 @@ const Layout = ({ children, heroComponent }) => {
           <footer className="py-6">
             <a
               href="https://creativecommons.org/licenses/by/4.0/"
-              className="pr-5"
+              className="pr-5 hover:text-primary-500"
             >
-              <IconCc className="inline-block h-5 -mt-1 pr-1" />{" "}
+              <IconCc className="inline-block h-5 -mt-1 pr-1 fill-current" />{" "}
               <IconCcBy className="inline-block h-5 -mt-1 pr-1" />
             </a>
             <a
@@ -49,7 +49,7 @@ const Layout = ({ children, heroComponent }) => {
             </a>
             OE Policy Registry is a project by{" "}
             <a className="hover:underline" href="https://oerworldmap.org/">
-              <IconGlobe className="inline-block h-3 -mt-1 pr-1" />
+              <IconGlobe className="inline-block h-3 -mt-1 ml-1 pr-1" />
               OER World Map
             </a>
           </footer>
