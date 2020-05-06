@@ -5,7 +5,7 @@
 package = "netlify-plugin-gatsby-cache"
 
 [[redirects]]
-from = "/api"
+from = "/api/*"
 to = "https://oerworldmap.org"
 status = 200
 force = true
