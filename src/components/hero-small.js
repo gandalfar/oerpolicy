@@ -24,7 +24,7 @@ const HeroSmall = ({ title, description, children }) => (
 )
 
 HeroSmall.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.element.isRequired,
   description: PropTypes.string,
   children: PropTypes.node,
   heroComponent: PropTypes.element,

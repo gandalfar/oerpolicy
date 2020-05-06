@@ -245,7 +245,7 @@ const IndexPage = ({ location }) => (
             We have a set of resources to support the development of OE policies
             at an institutional or governmental level.
           </p>
-          <p class="mt-10">
+          <p className="mt-10">
             <Link to="/resources" className="button primary">
               Explore Resources
             </Link>

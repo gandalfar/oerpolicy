@@ -20,7 +20,7 @@ const Hero = ({ title, description, children }) => (
 )
 
 Hero.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.element.isRequired,
   description: PropTypes.string,
   children: PropTypes.node,
   heroComponent: PropTypes.element,

@@ -47,7 +47,7 @@ const Layout = ({ children, heroComponent }) => {
             >
               Imprint & Privacy
             </a>
-            OE Policy Registry is a project by{" "}
+            OE Policy Hub is a project by{" "}
             <a className="hover:underline" href="https://oerworldmap.org/">
               <IconGlobe className="inline-block h-3 -mt-1 ml-1 pr-1" />
               OER World Map

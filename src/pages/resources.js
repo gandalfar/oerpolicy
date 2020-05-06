@@ -26,7 +26,7 @@ const ResourcePage = ({ location }) => (
       }}
     >
       <OneColumn className="w-full lg:w-2/3">
-        <p>
+        <div>
           <ul>
             <li>
               <span>Policy Lab Canvas</span>
@@ -51,12 +51,12 @@ const ResourcePage = ({ location }) => (
               </a>
             </li>
           </ul>
-        </p>
+        </div>
       </OneColumn>
     </ContentFeature>
     <ContentFeature header={{ title: "Select Readings" }}>
       <OneColumn className="w-full lg:w-2/3">
-        <ul class="resources__readings">
+        <ul className="resources__readings">
           <li>
             UNESCO (2019) Recommendation on Open Educational Resources (OER).
             UNESCO Publishing. Retrieved from{" "}
