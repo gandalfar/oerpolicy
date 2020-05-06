@@ -9,4 +9,4 @@ from = "/api"
 to = "https://oerworldmap.org"
 status = 200
 force = true
-query = {q = ":q", size = ":size", sort = ":s"}
+
