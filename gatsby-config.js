@@ -53,7 +53,7 @@ module.exports = {
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
         extractors: [
           {
-            extractor: content => {
+            extractor: (content) => {
               return content.match(/[\w-/.:]+(?<!:)/g) || []
             },
             extensions: ["js", "ts", "jsx", "tsx", "md", "mdx"],
@@ -62,6 +62,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-force-trailing-slashes`,
+    `gatsby-plugin-loadable-components-ssr`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
