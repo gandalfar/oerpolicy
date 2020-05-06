@@ -1,5 +1,5 @@
 [build]
-  publish = "public"
+  publish = "public/"
 
 [[plugins]]
 package = "netlify-plugin-gatsby-cache"
@@ -9,4 +9,5 @@ from = "/api/*"
 to = "https://oerworldmap.org/:splat"
 status = 200
 force = true
+query = {q = ":q", size = ":size", sort = ":s"}
 
