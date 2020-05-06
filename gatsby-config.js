@@ -63,6 +63,7 @@ module.exports = {
     },
     `gatsby-plugin-force-trailing-slashes`,
     `gatsby-plugin-loadable-components-ssr`,
+    `gatsby-plugin-netlify`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

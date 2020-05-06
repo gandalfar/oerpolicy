@@ -4,4 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+exports.createPages = ({ actions }) => {
+  const { createRedirect } = actions
+  createRedirect({
+    fromPath: "/api/*",
+    toPath: "https://oerworldmap.org/:splat",
+    isPermanent: true,
+    force: true,
+  })
+}

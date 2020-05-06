@@ -36,6 +36,7 @@
   "devDependencies": {
     "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "gatsby-plugin-loadable-components-ssr": "^2.0.0",
+    "gatsby-plugin-netlify": "^2.3.2",
     "prettier": "^2.0.5"
   },
   "keywords": [
