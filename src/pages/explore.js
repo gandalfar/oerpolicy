@@ -21,6 +21,7 @@ const ExplorePage = () => {
   const host = NODE_ENV === "production" ? "/api/" : "https://oerworldmap.org/"
   const url = `${host}resource.json?q=about.@type:Policy&sort=dateCreated:DESC&size=500`
 
+  console.log(NODE_ENV)
   console.log(url)
   const { data } = useSWR(url, fetcher)
 
