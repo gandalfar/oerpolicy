@@ -1,3 +1,5 @@
+const { createProxyMiddleware } = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
     title: `OE Policy Hub`,
@@ -69,4 +71,16 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  developMiddleware: (app) => {
+    app.use(
+      "/api/",
+      createProxyMiddleware({
+        changeOrigin: true,
+        target: "https://oerworldmap.org/",
+        pathRewrite: {
+          "/api/": "/",
+        },
+      })
+    )
+  },
 }
