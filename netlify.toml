@@ -6,7 +6,7 @@ package = "netlify-plugin-gatsby-cache"
 
 [[redirects]]
 from = "/api"
-to = "https://oerworldmap.org/"
+to = "https://oerworldmap.org"
 status = 200
-force = false
-conditions = {q = ":q", size = ":size", sort = ":s"}
+force = true
+query = {q = ":q", size = ":size", sort = ":s"}
