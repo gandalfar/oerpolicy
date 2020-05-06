@@ -16,7 +16,7 @@ const PieChartPoliciesByFocus = loadable(() =>
 )
 
 const ExplorePage = () => {
-  const url = `/api/resource.json?q=about.@type:Policy&sort=dateCreated:DESC&size=500`
+  const url = `/api/resource.json`
   const { data } = useSWR(url, fetcher)
 
   return (
