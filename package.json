@@ -23,7 +23,7 @@
     "isomorphic-unfetch": "^3.0.0",
     "jsdom": "^16.2.2",
     "lodash": "^4.17.15",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "plotly.js": "^1.54.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
